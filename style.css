@@ -1,8 +1,4 @@
-*,
-*::before,
-*::after {
-  margin: 0;
-  /* margin-top: 0; mert a text-eknek van default top margin */
+* {
   padding: 0;
   border: 0;
   outline: none;
@@ -26,6 +22,7 @@ button {
 
 :root {
   --clr-bg: hsl(225, 100%, 94%);
+  --clr-bg-light: hsl(226, 87%, 97%);
   --clr-button: hsl(245, 75%, 52%);
   --clr-card-bg: hsl(225, 100%, 98%);
   --clr-text: hsl(224, 23%, 55%);
@@ -33,13 +30,115 @@ button {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background-image: url(images/pattern-background-mobile.svg);
+  background-size: cover;
+  background-position: center center;
+  background-color: var(--clr-bg);
+
+  color: var(--clr-text);
   font-family: "Red Hat Display", sans-serif;
   font-size: 16px;
   font-weight: 500;
-  background-color: var(--clr-bg);
+
+  text-align: center;
+}
+
+main {
+  width: 320px;
+  background-color: var(--clr-card-bg);
+  border-radius: 2rem;
+  box-shadow: 0px 12px 17px -6px rgba(68, 80, 184, 0.69);
+}
+
+.hero {
+  width: 100%;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.card {
+  padding: 1.5em;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: 900;
+  color: var(--clr-text-dark);
+  margin-bottom: 1em;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  background-color: var(--clr-bg-light);
+  border-radius: 1em;
+  padding: 0.9em;
+  align-items: center;
+}
+
+.item-2 {
+  text-align: left;
+}
+
+strong {
+  text-align: left;
+  color: var(--clr-text-dark);
+}
+
+.change {
+  font-weight: 900;
+  color: var(--clr-button);
+  text-decoration: underline;
+}
+
+.change:hover {
   color: var(--clr-text);
 }
 
+.payment {
+  width: 100%;
+  margin: 1.5em 0;
+  padding: 1em;
+  border-radius: 1em;
+  background-color: var(--clr-button);
+  color: white;
+  font-size: 1em;
+  font-weight: 700;
+  box-shadow: 0px 12px 15px -5px var(--clr-text);
+}
+
+.payment:hover {
+  font-size: 0.8em;
+  margin: 1.8em 0;
+  padding: 1.4em;
+  border-radius: 1.2em;
+  background-color: var(--clr-text);
+  box-shadow: 0px 0px 15px -5px var(--clr-text);
+}
+
+.cancel {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.cancel:hover {
+  font-size: 0.8em;
+  color: var(--clr-text-dark);
+}
+
+footer {
+  position: absolute;
+  bottom: 8px;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
