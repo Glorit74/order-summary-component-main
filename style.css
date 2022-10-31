@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  /* margin-top: 0; mert a text-eknek van default top margin */
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+
+  background: transparent;
+
+  font-family: inherit;
+
+  text-decoration: none;
+}
+
+img {
+  border: none;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+}
+
+:root {
+  --clr-bg: hsl(225, 100%, 94%);
+  --clr-button: hsl(245, 75%, 52%);
+  --clr-card-bg: hsl(225, 100%, 98%);
+  --clr-text: hsl(224, 23%, 55%);
+  --clr-text-dark: hsl(223, 47%, 23%);
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
