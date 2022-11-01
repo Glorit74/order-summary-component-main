@@ -36,7 +36,6 @@ body {
   align-items: center;
   height: 100vh;
 
-  background-image: url(images/pattern-background-mobile.svg);
   background-size: cover;
   background-position: center center;
   background-color: var(--clr-bg);
@@ -50,10 +49,27 @@ body {
 }
 
 main {
-  width: 320px;
   background-color: var(--clr-card-bg);
   border-radius: 2rem;
   box-shadow: 0px 12px 17px -6px rgba(68, 80, 184, 0.69);
+}
+
+@media (max-width: 375px) {
+  body {
+    background-image: url(images/pattern-background-mobile.svg);
+  }
+  main {
+    width: 320px;
+  }
+}
+
+@media (min-width: 375px) {
+  body {
+    background-image: url(images/pattern-background-desktop.svg);
+  }
+  main {
+    width: 400px;
+  }
 }
 
 .hero {
